@@ -17,7 +17,7 @@ public class RabbitMQConfig {
 
     @Bean
     public Queue emailQueue() {
-        return new Queue(queueName);
+        return new Queue(queueName, true);
     }
 
     @Bean
