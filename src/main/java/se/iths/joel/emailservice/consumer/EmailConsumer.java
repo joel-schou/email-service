@@ -14,8 +14,14 @@ public class EmailConsumer {
         this.emailService = emailService;
     }
 
-    @RabbitListener(queues = "${rabbitmq.queue.email}")
+    @RabbitListener(queues = "email-queue")
     public void receiveOrderConfirmation(OrderConfirmationMessage message) {
+        
+        System.out.println("Email: " + message.getEmail());
+        System.out.println("Customer: " + message.getCustomerName());
+        System.out.println("Product: " + message.getProductName());
+        System.out.println("Quantity: " + message.getQuantity());
+
         emailService.sendEmail(
                 message.getEmail(),
                 message.getCustomerName(),
