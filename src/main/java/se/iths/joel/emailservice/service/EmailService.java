@@ -30,6 +30,19 @@ public class EmailService {
                         "Antal: " + quantity
         );
 
-        mailSender.send(message);
+        try {
+            mailSender.send(message);
+            System.out.println("Email sent to: " + email);
+
+        } catch (Exception e) {
+
+            System.out.println("Email-service received order successfully");
+            System.out.println("Attempted to send email to: " + email);
+            System.out.println("Customer: " + customerName);
+            System.out.println("Product: " + productName);
+            System.out.println("Quantity: " + quantity);
+
+            System.out.println("SMTP failed: " + e.getMessage());
+        }
     }
 }
