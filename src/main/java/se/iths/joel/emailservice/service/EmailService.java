@@ -9,8 +9,8 @@ public class EmailService {
     public void sendOrderEmail(OrderMessage order) {
 
         System.out.println("Email-service built order email successfully");
-        System.out.println("Customer: " + order.getCustomerName());
+        System.out.println("Customer: " + order.getCustomerEmail());
         System.out.println("Total price: " + order.getTotalPrice());
-        System.out.println("Items: " + order.getOrderItems());
+        System.out.println("Items: " + order.getItems());
     }
 }

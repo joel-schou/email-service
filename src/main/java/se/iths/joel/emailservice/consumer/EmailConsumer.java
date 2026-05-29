@@ -18,9 +18,9 @@ public class EmailConsumer {
     public void receiveOrder(OrderMessage order) {
 
         System.out.println("Email-service received order successfully");
-        System.out.println("Customer: " + order.getCustomerName());
+        System.out.println("Customer: " + order.getCustomerEmail());
         System.out.println("Total price: " + order.getTotalPrice());
-        System.out.println("Items: " + order.getOrderItems());
+        System.out.println("Items: " + order.getItems());
 
         emailService.sendOrderEmail(order);
     }
