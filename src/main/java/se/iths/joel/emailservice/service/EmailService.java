@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import se.iths.joel.emailservice.dto.OrderItemMessage;
 import se.iths.joel.emailservice.dto.OrderMessage;
 
+/**
+ * Skapar och skickar orderbekräftelser via e-post.
+ */
 @Service
 public class EmailService {
 
