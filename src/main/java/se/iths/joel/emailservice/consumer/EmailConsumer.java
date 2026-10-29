@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 import se.iths.joel.emailservice.dto.OrderMessage;
 import se.iths.joel.emailservice.service.EmailService;
 
+/**
+ * Tar emot ordermeddelanden från RabbitMQ och skickar dem vidare till e-posttjänsten.
+ */
 @Component
 public class EmailConsumer {
 
